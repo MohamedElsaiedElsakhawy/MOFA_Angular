@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+<form [formGroup]="deleteBookForm" (ngSubmit)="deleteBook()" class="form-control" action="/action_page.php">
+  <div class="form-group">
+    <label for="title">Id</label>
+    <input type="text" class="form-control" id="id" required name="id" formControlName="id" />
+  </div>
+
+  <div class="form-group">
+    <input type="submit" class="btn btn-dark btn-block" value="Delete">
+  </div>
+
+</form>

@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+<!--<table class="table table-bordered table-hover ">-->
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>NumberOfPages</th>
+      <th>PublishedAt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{book.id}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.numberOfPages}}</td>
+      <td>{{book.publishedAt | date: 'yyyy-MM-dd' }}</td> <!---| date: 'yyyy-MM-dd'-->
+    </tr>
+  </tbody>
+</table>
